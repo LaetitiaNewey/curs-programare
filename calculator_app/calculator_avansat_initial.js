@@ -20,30 +20,21 @@ let resultDisplay = document.querySelector('.result');
 
 let number1 = 0;
 let number2 = 0;
-let startNumberTwo = false;
-let operation = ' ';
+let operationPressed = false;
 
-function createNumber(digit)
-{
-  if(startNumberTwo === false)
-  {
-    number1 = number1 * 10 + digit;
-    resultDisplay.innerHTML = number1;
-  }
-  else
-  {
-    number2 = number2 * 10 + digit;
-    resultDisplay.innerHTML = number2;
-  }
+function createNumber(number, digit){
+  number = number*10+digit;
+  resultDisplay.innerHTML=number;
+  return number;
 }
 
 function add(){
   let sum = Number(number1)+Number(number2);
-  return sum;
+ return sum;
 }
 
 function substract(){
-  let subs = Number(number1)-Number(number2);
+ let subs = Number(number1)-Number(number2);
   return subs;
 }
 
@@ -56,74 +47,102 @@ function del(){
   let number = resultDisplay.innerHTML;
   number = parseInt(number/10);
   resultDisplay.innerHTML=number;
-  if(startNumberTwo==false)
+  if(operationPressed==false)
     number1=number;
   else
     number2=number;
 }
 
 function clear(){
-  resultDisplay.innerHTML='';
-  startNumberTwo=false;
+  resultDisplay.innerHTML=' ';
+  operationPressed=false;
     number1=0;
     number2=0;
 }
 
 digit0.addEventListener('click', function(){
-  createNumber(0);
+  if(operationPressed==false)
+  number1=createNumber(number1, 0);
+  else
+  number2=createNumber(number2, 0);
 });
 
 digit1.addEventListener('click', function(){
-  createNumber(1);
+  let number = resultDisplay.innerHTML;
+  if(operationPressed==false)
+     number1=createNumber(number1, 1);
+  else
+    number2=createNumber(number2, 1);
   });
 
 digit2.addEventListener('click', function(){
-  createNumber(2);
-  });
+  if(operationPressed==false)
+     number1=createNumber(number1, 2);
+  else
+    number2=createNumber(number2, 2);
+});
 digit3.addEventListener('click', function(){
-  createNumber(3);
-  });
+  if(operationPressed==false)
+     number1=createNumber(number1, 3);
+else
+    number2=createNumber(number2, 3);
+});
 
 digit4.addEventListener('click', function(){
-  createNumber(4);
+  if(operationPressed==false)
+  number1=createNumber(number1, 4);
+else
+ number2=createNumber(number2, 4);
 });
 
 digit5.addEventListener('click', function(){
-  createNumber(5);
+  if(operationPressed==false)
+  number1=createNumber(number1, 5);
+else
+ number2=createNumber(number2, 5);
 });
 
 digit6.addEventListener('click', function(){
-  createNumber(6);
+  if(operationPressed==false)
+  number1=createNumber(number1, 6);
+else
+ number2=createNumber(number2, 6);
 });
 
 digit7.addEventListener('click', function(){
-  createNumber(7);
+  if(operationPressed==false)
+  number1=createNumber(number1, 7);
+else
+ number2=createNumber(number2, 7);
 });
 
 digit8.addEventListener('click', function(){
-  createNumber(8);
+  if(operationPressed==false)
+  number1=createNumber(number1, 8);
+else
+ number2=createNumber(number2, 8);
 });
 
 digit9.addEventListener('click', function(){
-  createNumber(9);
+  if(operationPressed==false)
+  number1=createNumber(number1, 9);
+else
+ number2=createNumber(number2, 9);
 });
 
 additionButton.addEventListener('click', function(){
   resultDisplay.innerHTML=' ';
-  // startNumberTwo = true;
-  operation = '+';
+  operationPressed = '+';
 });
 
 substractionButton.addEventListener('click', function(){
   resultDisplay.innerHTML=' ';
-  // startNumberTwo = true;
-  operation = '-';
+  operationPressed = '-';
 });
 
 multiplicationButton.addEventListener('click', function(){
   resultDisplay.innerHTML=' ';
-  // startNumberTwo = true;
-  operation = '*';
+  operationPressed = '*';
 });
 
 equalButton.addEventListener('click', function(){
@@ -146,7 +165,6 @@ equalButton.addEventListener('click', function(){
       number2 = 0;
     }
 });
-
 
 deleteButton.addEventListener('click', del);
 clearButton.addEventListener('click', clear);
