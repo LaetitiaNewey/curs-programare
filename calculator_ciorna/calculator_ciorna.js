@@ -54,6 +54,8 @@ function handleAddClick(){
   operation ='add';
   result.innerHTML = '+';
 }
+//TO DO: 
+
 // Functie care se ocupa de click-ul pe minus
 function handleMinusClick(){
   startBuildingSecondNumber = true;
@@ -94,7 +96,7 @@ function handleEqualsClick() {
     result.innerHTML = operationResult;
   };
 
-  // Reinitializam valorile initiale pentru a face cacule multiple.
+  // Reinitializam valorile initiale pentru a face cal cule multiple.
   firstNumber = '';
   secondNumber = '';
   startBuildingSecondNumber = false;
@@ -139,3 +141,15 @@ equals.addEventListener('click', handleEqualsClick);
 minus.addEventListener('click', handleMinusClick);
 del.addEventListener('click', handleDeleteClick);
 clear.addEventListener('click',handleClearClick);
+
+//impartire - la fel ca la inmultire; 
+
+// function divide {
+
+// }
+
+//adugare virgula la nr; cand apesi pe , vrei sa transformi nr tau in string ca sa concatenezi virgula la el (inca il ai string;
+//number: 33; apesi virgula -> transformi nr in '33' +',' restul nr asteptate sunt trimise ca string '+' '2' '+' 3'
+// 1 number
+// 2 String
+// 3 number; dupa transformare transformi sirul de caracter ca number

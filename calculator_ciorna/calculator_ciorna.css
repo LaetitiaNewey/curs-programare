@@ -8,3 +8,34 @@ button {
   .line {
     display: flex;
   }
+
+
+  
+  main
+{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+#display
+{
+    background-color: grey;
+    padding: 10px;
+    text-align: right;
+}
+.button-row
+{
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+button
+{
+    padding: 20px 0px 20px 0px;
+    width: 10px;
+    flex-grow: 1;
+}
+#zero
+{
+    flex-grow: 2;
+}

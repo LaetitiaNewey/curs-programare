@@ -1,0 +1,1 @@
+root.innerHTML+='<nav><ul> <li> Meniu</li> <li> Galerie</li></ul></nav>';
