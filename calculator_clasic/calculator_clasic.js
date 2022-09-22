@@ -74,15 +74,12 @@ const calculator = {
     }
 
     function deleteLastDigit() {
-      const display = document.querySelector('.calculator-screen');
-      display.value = calculator.displayValue;
-      console.log('::: ' + display.value + ' ' + display.value.length + ' ' + display.value.slice(-1));
-      if (display.value.length == 1) {
-        calculator.displayValue  = '0';
-      } else {
-        calculator.displayValue = display.value.slice(0, -1);
-      }
+      const { displayValue, waitingForSecondOperand } = calculator;
+      if (waitingForSecondOperand === true){
       return;
+      } else {
+      calculator.displayValue = calculator.displayValue.slice(0,-1);
+      }
     }
   
   function updateDisplay() {
