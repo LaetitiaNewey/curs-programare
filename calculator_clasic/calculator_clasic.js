@@ -14,15 +14,17 @@ const calculator = {
     } else {
     calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
     }
-
-    console.log(calculator);
   }
 
   function inputDecimal(dot) {
     if (calculator.waitingForSecondOperand === true) {
-      calculator.displayValue = '0.'
+      calculator.displayValue = "0."
       calculator.waitingForSecondOperand = false;
       return
+    }
+
+    if (!calculator.displayValue.includes(dot)) {
+      calculator.displayValue += dot;
     }
   }
 
@@ -70,6 +72,18 @@ const calculator = {
       calculator.operator = null;
       console.log(calculator);
     }
+
+    function deleteLastDigit() {
+      const display = document.querySelector('.calculator-screen');
+      display.value = calculator.displayValue;
+      console.log('::: ' + display.value + ' ' + display.value.length + ' ' + display.value.slice(-1));
+      if (display.value.length == 1) {
+        calculator.displayValue  = '0';
+      } else {
+        calculator.displayValue = display.value.slice(0, -1);
+      }
+      return;
+    }
   
   function updateDisplay() {
     // select the element with class of `calculator-screen`
@@ -81,10 +95,10 @@ const calculator = {
   updateDisplay();
 
   const keys = document.querySelector('.calculator-keys');
-
-  keys.addEventListener('click', (event) => {
+  keys.addEventListener('click', event => {
   // Access the clicked element
      const { target } = event;
+     const { value } = target;
   // Check if the clicked element is a button.
   // If not, exit from the function
     if (!target.matches('button')) {
@@ -104,14 +118,15 @@ const calculator = {
     return;
   }
 
-  if (target.classList.contains('all-clear')) {
-    resetCalculator();
+  if (target.classList.contains('delete-digit')) {
+    deleteLastDigit();
     updateDisplay();
     return;
   }
 
-  if(target.classList.contains('delete')) {
-    console.log('delete', target.value);
+  if (target.classList.contains('all-clear')) {
+    resetCalculator();
+    updateDisplay();
     return;
   }
 
