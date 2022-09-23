@@ -1,0 +1,42 @@
+<html lang="en">
+<body>
+  <h1>Pagina cu butoane</h1>
+  <div>
+    <button class='impar'>Buton 1</button>
+    <button class='impar'>Buton 3</button>
+  </div>
+  <div>
+    <button class='par' add>Buton 2</button>
+    <button id='par2'>Buton 4</button>
+  </div>
+</body>
+</html>
+
+//JS:
+console.log('aici');
+console.log(document.getElementsByClassName('impar'));
+function f(){
+  console.log('am apasat pe buton')
+}
+document.getElementById('par2').addEventListener('mouseover', f());
+
+
+<html lang="en">
+<body>
+  <h1>Pagina cu surprize</h1>
+  <span id='imagine'>
+    <button id='buton'>Click me!</button
+  </span>
+</body>
+</html>
+
+//console.log(document.getElementById('buton'));
+
+let butonulCuSurprize = document.getElementById('buton');
+
+function f(){
+  let divDeModificat = document.getElementById('imagine');
+  divDeModificat.innerHTML = '<img src = "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg">';
+}
+
+butonulCuSurprize.addEventListener('click', f)
