@@ -1,0 +1,111 @@
+//se dau 2 nr x si y
+//sa se afiseze cel mai mare numar dintre ele
+let x = 40;
+let y = 50; 
+let z = 30;
+if(x > y){
+  console.log(x + " este mai mare decat " + y)
+} 
+else console.log(y + " este mai mare decat " + x)
+//se dau 3 numere, sa se afiseze care e mai mare
+if(x > y && x > z)
+  console.log(x + " mai mare");
+else if (y > x && y > z)
+  console.log(y +" mai mare");
+else console.log(z +" mai mare");
+
+//switch
+var luna = 3;
+switch(luna)
+  {
+    case 1: 
+      console.log("Ianuarie");
+      break;
+    case 2:
+      console.log("Februarie");
+      break;
+    case 3: 
+      console.log("Martie")
+      break;
+          case 3: 
+      console.log("Aprilie")
+      break;
+    default:
+      console.log("luna trebuie sa fie intre 1 si 12");
+  }
+
+//while() - sa se determine cate cifre are un numar
+let nrCifre = 0;
+let number = 12351782318273;
+while(number > 1)
+  {
+     number = number / 10; 
+    nrCifre = nrCifre + 1;
+  }
+console.log(nrCifre);
+
+//for() - sa se afiseze toate nr de la 1 la 100
+for(let i=1; i <= 100; i++)
+  console.log(i);
+
+//while pentru for-ul de mai sus
+let i = 1;
+while(i <= 100)
+  {
+    console.log(i);
+    i++;
+  }
+
+//for() - sa se afiseze toate numerele care sunt mai mici decat 200 si mai mari decat 100 si sunt divizibile cu 3
+for(let i = 100; i<=200; i++)
+  {
+    if(i % 3 === 0)
+      {
+        console.log(i);
+      }
+  }
+
+//Probleme
+//1. Se dau 2 numere x si y. Sa se afiseze toate nr in intervalul x si y care sunt divizibile atat cu 2 cat si cu 5
+let x1 = 10;
+let y1 = 50;
+for(x1; x1<y1; x1++){
+  if(x1 % 2===0 && x1 % 5 === 0)
+    console.log(x1);
+}
+
+//2. Se dau 2 numere x si y. Sa se afiseze numarul care are mai multe cifre.
+let x2 = 1903412370;
+let y2 = 19203198132123;
+let nrCifreX = 0;
+let nrCifreY= 0;
+while(x2 >= 1)
+  {
+    x2 = x2 / 10;
+    nrCifreX++;
+  }
+while(y2 >= 1)
+  {
+    y2 = y2 / 10;
+    nrCifreY++;
+  }
+console.log("x are: " + nrCifreX + " cifre");
+console.log("y are: " + nrCifreY + " cifre");
+
+if(nrCifreX > nrCifreY)
+  console.log("x are mai multe cifre");
+else console.log("y are mai multe cifre");
+
+
+//3. Sa se verifice daca un numar este prim(un nr prim este prim daca ii are ca divizori doar pe 1 si el insusi)
+let nr = 24;
+//divizorii lui 24 sunt: 2, 3, 4, 6 , 8, 12
+//presupunem ca nr este prim
+let estePrim = true;
+for(let i = 2; i<24; i++)
+  if(nr % i == 0)
+    estePrim = false;
+  if(estePrim)
+    console.log("este prim");
+  else 
+    console.log("nu este prim");
