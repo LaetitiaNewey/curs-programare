@@ -1,0 +1,49 @@
+//Functia constructor - la constructor si clase  declaram cu litera mare
+// FCT constructor nu functioneaza fara this si new
+// Fct constructor e ca o functie oarecare. 
+// Param this si new ii folosim pt a atribui ob nostru
+// // nume, varsta, salariu -> param nostrii = input care sunt facuti de constructor ca un obiect (outputul) =>{nume: "Andrei", varsta: 27; salariu: 2700}
+// let angajat = {nume: "Ion",
+//               varsta: 33,
+//               salariu: 6000,}
+
+
+// //functia este ca un alt atribut al obiectului; marire este numele functiei
+// //putem sa atribuim functii variabilelor!!!!
+// console.log(angajat);
+
+// angajat.marire = function () {
+//   angajat.salariu = angajat.salariu + 300;
+// }
+// angajat.marire(); //asa apelam functia ca sa ne returneze salariul marit al lui Ion
+// console.log(angajat);
+
+function Angajat (nume, varsta, salariu){ //atribuim acesti param campurilor din ob meu, adica cheile
+  // this = {} -> this e un obiect gol, null
+  this.nume = nume;
+  this.varsta = varsta;
+  this.salariu = salariu; // this face referire la obiectul din care e apelata functia
+  // return this;
+}
+
+
+
+let angajat1 = new Angajat('David', 23, 2500); //new: i am spus codului meu ca o sa primeasca un NOU obiect; new stie sa creeze memorie pt noul obiect
+console.log(angajat1);
+let angajat2= new Angajat('Andrei', 27, 2700);
+console.log(angajat2);
+
+//this exista doar in int unei functii, este ob din care se apeleaza functia
+// in obiecte pot sa am functii
+
+//PROTOTYPE - pt functii pe obiecte, pt a adauga functii si a nu avea probleme; se adauga pt toate obiectele angajat (si angajat1, si angajat2 etc...)
+
+
+Angajat.prototype.marire = function () {
+  this.salariu +=300;
+  }
+angajat1.marire();
+console.log(angajat1);
+
+// class e folosit pt a da tipul unui obiect
+//classa e blueprintul unui ob (aruncam tot ce e nevoie in ea) si obiectul este o instantiere a unei clase = blueprintul construit (intrebare interviu: diferenta intre clase si obiecte? ) 

@@ -1,0 +1,10 @@
+let myString= "Animal";
+myString = myString.split(""); //stringurile nu pot fi modificate/ imutabile (decat cu totul) si de aceea vrem sa spargem stringul intr un array
+console.log(myString);
+// Intorc array-ul
+myString.reverse();
+console.log(myString);
+
+myString = myString.join(" ");
+console.log(myString);
+

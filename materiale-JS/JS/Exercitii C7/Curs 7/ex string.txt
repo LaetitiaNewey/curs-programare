@@ -1,0 +1,21 @@
+var myString='Ana are mere';
+var myString2 = ' si pere';
+console.log(myString.concat(myString2));   intoarce un rezultat dar NU modifica valoare mea din myString
+console.log(myString);
+myString = myString.concat(myString2);
+console.log(myString);
+
+console.log(myString.substring(3,7));  A0 N1 A2 _3 A4 R5 E6 _7 M8 E9 R10 E11 SI PERE....
+console.log(myString.substring(6));
+
+console.log(myString.slice(4));
+console.log(myString.slice(-4));
+
+console.log(myString.length);
+console.log(myString.includes('mere'));
+console.log(myString.includes('dere'));
+
+console.log(myString.replace('mere', 'datorii'));
+
+console.log(myString.split('si')); creaza un array din doua elem, eliminand cuv 'si'
+console.log(myString.split(' '));

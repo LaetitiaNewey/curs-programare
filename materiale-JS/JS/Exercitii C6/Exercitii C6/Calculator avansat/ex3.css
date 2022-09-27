@@ -1,0 +1,10 @@
+.row{
+  display:grid;
+  grid-template-columns:10% 10% 10% 10%;
+}
+
+.result{
+  background-color:yellow;
+    height: 2rem;
+    width:16rem;
+}

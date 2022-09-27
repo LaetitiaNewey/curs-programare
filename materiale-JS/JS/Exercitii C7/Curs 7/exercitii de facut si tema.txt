@@ -1,0 +1,33 @@
+
+//se da un sir de caractere format din litere fara spatii (un cuv) sa se calc nr de vocale din acesta
+var myString = 'Portocaela';
+let nrVoc=0;
+var vocale ='AEIOUaeiou';
+for (var i=0; i<myString.length; i++)
+  if(vocale.includes(myString[i])){
+    nrVoc++;}
+console.log(nrVoc);
+    
+    
+    // se da un vector de nr, sa se calc media lui aritmetica folosing functia reduce
+
+let note= [8, 10, 5, 4, 9];
+let medie = note.reduce((sum,nota) => {return sum +nota/note.length},0);
+console.log(medie);
+
+//SAU
+
+let medie2= note.reduce((sum, nota) => 
+                       sum + nota)/ note.length;
+console.log(medie2);
+
+
+//se da un vector de siruri de caractere, sa se afle cel mai lung sir
+
+let animale=['papagal', 'pisica', 'caine', 'elefant']
+
+console.log(animale.filter( nume => {  if (nume[0] == 'A')  //iar arrow function; apelam fct filter, nume e un param care reprez toate numele din vector (stie fctia filter)
+                                  return true;
+                                  else
+                                  return false;
+                                  })) 

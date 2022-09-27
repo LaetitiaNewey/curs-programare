@@ -1,0 +1,31 @@
+let myArray =[1,5,7,9,10];
+function double(number)
+{return 2*number;}
+myArray = myArray.map( number =>number *2); //arrow function pe care le declaram in int unor functii.
+console.log(myArray);
+myArray = myArray.map( number => double(number)); //trimitem o variabila pe care o stie fct map (cu ea parcurge arrayul meu)
+console.log(myArray);
+
+function halfing(number){
+  return number/2;
+ }
+
+myArray = myArray.map( produs => halfing(produs));
+console.log(myArray);
+
+//FCT DE FILTRARE
+let elevi = ['Andrei', 'Raul', 'Alexandra', 'Eduard'];
+
+console.log(elevi.filter( nume => {  if (nume[0] == 'A')  //iar arrow function; apelam fct filter, nume e un param care reprez toate numele din vector (stie fctia filter)
+                                  return true;
+                                  else
+                                  return false;
+                                  })) 
+
+// FCT REDUCE
+
+let preturi = [4,5,6,1,6,9];
+console.log(preturi.reduce( (accumulator, pret) => { //un acumulator si variabila cu care parcurgem arrayul
+  return accumulator + pret; 
+  
+},0)); //valoarea initiala a acumulatorului meu, poate fi pus 100 si va da 131

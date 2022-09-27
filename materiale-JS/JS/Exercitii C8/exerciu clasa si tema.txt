@@ -1,0 +1,59 @@
+// Creati o clasa care poate fi folosita pentru a crea mai multe ferme. Fiecare ferma trebuie sa contina un id, o locatie si un array cu animale. Fiecare animal trebuie sa aiba nume si cantitate (deci practic un animal va fi un obiect)
+
+// Clasa va contine si doua metode:
+// 1. listAnimals: metoda va afisa la consola un sir de caractere, ce contine toate animalele din ferma.
+// EX: farm1.listAnimals() => "Ferma contine urmatoarele animale: cal, gaina, pisica" (evident, cal, gaina si pisica sunt valori ale numelor animalelor din array-ul primit ca parametru de obiectul ferma1)
+// 2. listRareAnimals: metoda va afisa la consola un sir de caractere, care va insira toate animalele ale caror cantitate e mai mica decat 5.
+
+// Creati minim 3 ferme, care sa contina cel putin 3 animale.
+
+
+
+
+
+
+function Animal (nume, cantitate){ 
+
+ this.nume = nume;
+ this.cantitate = cantitate;
+
+}
+
+let animal1 = new Animal('purcelusi', 100);
+
+let animal2 = new Animal('oi', 300);
+let animal3 = new Animal('caini', 2);
+let animal4 = new Animal('pisici', 40);
+class Ferma { 
+  constructor (id, locatie, Animal) {
+         
+          this.id = id;
+      
+          this.locatie = locatie;
+         
+          this.Animal =  Animal;
+         
+        }
+              
+         listAnimals() {
+           let arrayNames=[];
+      for (var i = 0; i < this.Animal.length; i++)      {
+        arrayNames.push(this.Animal[i].nume)
+      }       
+         console.log('La ferma avem: ' + arrayNames);
+         }
+              }
+
+let animaleFerma1 = [animal1, animal2];
+let animaleFerma2 = [animal2, animal3];
+let animaleFerma3 = [animal1, animal3];
+let animaleFerma4 = [animal3, animal4];
+let ferma1 = new Ferma ('1', 'Sibiu', animaleFerma1);
+let ferma2 = new Ferma('2', 'Cluj', animaleFerma2);
+let ferma3 = new Ferma('3', 'Ilfov', animaleFerma3);
+let ferma4 = new Ferma('4', 'Constanta', animaleFerma4);
+
+ferma1.listAnimals()
+ferma2.listAnimals()
+ferma3.listAnimals()
+ferma4.listAnimals()

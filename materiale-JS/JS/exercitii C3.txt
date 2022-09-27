@@ -1,0 +1,272 @@
+// // var a = 30;
+// // var b = 40;
+// // console.log((a+b)/2);
+
+// // function medie(a, b){
+// //   let suma = a + b;
+// //   console.log(suma);
+// //   return (suma/2);
+// // }
+// //                   //medie(30,10)
+// // //console.log(medie(medie(50, 10), 10));
+
+// // console.log(medie(30, 10, 45))//In cazul in care vom trimite ca parametri mai multi decat este cazul, functia va folosi doar primii n parametri, unde n este numarul de parametri in declararea functiei
+// // //console.log(medie(30))
+
+// // // let nr = 123445;
+
+// // // function nrCifre(numar){
+// // //   var l = 0;
+// // //   while(nr >= 1){
+// // //     l++;
+// // //     nr = nr/10;
+// // //   }
+// // //   return l;
+// // // }
+
+// // // console.log(nrCifre(nr));
+
+// // //Se da un numar natural n
+// // //Sa se calculeze numarul de cifre pare ale lui n
+
+// // // let nr = 123445
+
+// // // function calculNrCifrePare(nr){
+// // //   let nrCifrePare = 0;
+// // //   while(nr >= 1){
+// // //     if(parseInt(nr)%2==0)
+// // //       nrCifrePare++;
+// // //     nr = nr/10;
+// // //   }
+// // //   return nrCifrePare;
+// // // }
+// // // console.log(calculNrCifrePare(nr))
+
+// // //Se dau doua numere natural a si b, a < b
+// // //Sa se calculeze cate numere divizibile cu 5 se afla in intervalul [a, b]
+// // //folosind o functie
+
+
+// // var a = 35;
+// //  function numara(a,b)
+// // {
+// //   console.log(a);
+// //   var lungime = 0;
+// //   for(var i = a;i<=b;i=i+1)
+// //     {
+// //       if(i%5==0)
+// //         lungime ++;
+// //     }
+// //   return lungime;
+// // }
+// // console.log(a);
+// // console.log(numara(20,35));
+
+
+
+// // var y = 20;
+// // function f(x){
+// //   x = x/2;
+// //   console.log('in interiorul functiei :'+x);
+// // }
+// // console.log('inainte de apel : '+y);
+// // f(y);//y este trimis ca parametru => in parametrul x al lui f se salveaza doar VALOAREA lui y(adica catre functie se trimite o copie a lui y)
+// // console.log('dupa apel:'+y);
+
+// // var elev={firstName:'Ion',
+// //           lastName:'Popescu',
+// //           varsta:22
+// // }
+
+// // console.log(elev);
+
+// // //accesare cheie:
+// // console.log(elev.firstName);
+// // console.log(elev['firstName']);
+
+// // //modificare cheie:
+// // elev.firstName = 'Andrei';
+// // console.log(elev.firstName);
+
+// // //stergere cheie:
+// // delete elev.firstName;
+// // console.log(elev);
+
+// // //adaugare cheie:
+
+// // elev.medieGenerala = 9.3;
+// // console.log(elev);
+
+// // //sa se verifice daca elev are media generala >= 5
+// // //folosind o functie
+// // if(elev.medieGenerala > 5)
+// //   console.log('promovat');
+// // else
+// //   console.log('respins');
+
+// // //verificare existenta cheie
+
+// // if(elev.lastName !== undefined)
+// //   console.log(elev.lastName);
+// // else
+// //   console.log('nu exista');
+
+// // //parcurgere chei elev
+// // for(key in elev)
+// //   console.log(key +' : '+ elev[key]);
+
+
+// // const obiect={
+// //   cheie:1
+// // }
+
+// // const obiect2={
+// //   cheie:3
+// // }
+// // console.log(obiect.cheie);
+// // obiect.cheie = 3;
+// // console.log(obiect.cheie);
+
+// // obiect = obiect2;
+// // console.log(obiect);
+
+//  var elev1={firstName:'Ion',
+//            lastName:'Popescu',
+//            varsta:22
+// }
+ 
+// console.log('inainte atribuire:');
+// console.log(elev1);
+// //object.assign:
+// var elev2 = Object.assign({}, elev1);
+// console.log(elev2);
+// elev2.varsta = 14;
+// console.log('dupa atribuire:');
+// console.log(elev1);
+// console.log(elev2);
+// //Se vor modifica ambele obiecte :
+// // elev2.varsta = 14;
+// // console.log(elev1);
+// // console.log(elev2);
+
+
+//1.Se dau doua numere naturale
+//Sa se calculeze, folosind una sau mai multe functii, media aritmetica a tuturor
+//elementelor din intervalul format de cele doua numere
+
+//2.Se dau trei numere naturale, sa se calculeze cel mai mare numar dintre acestea
+//folosind una sau mai multe functii
+
+//3.Se da un numar natural n
+//sa se calculeze, folosind una sau mai multe functii, cel mai mare numar prim
+//mai mic decat n
+
+//4.se dau doua obiecte elev1, elev2 ca mai sus, sa se calculeze media mediilor celor 2, folosind una sau mai multe functii
+
+//5.Se da un numar natural n, sa se verifice cate numere prime se afla in intervalul [1,n], folosind o functie
+
+//1.
+
+function medieInterval(a, b){
+  let suma = 0;
+  let nr = 0;
+  for(var i = a; i <= b; i++)//Parcurgem intervalul dat
+    {
+      //suma tuturor numerelor divizbile cu 5 *
+   // if(i%5 == 0){
+        suma = suma + i;//Calculez suma numerelor din interval
+        nr++;// numar cate valori se afla in interval
+      }
+    //*}
+    return (suma/nr);
+}
+
+console.log(medieInterval(10, 30));
+//2.
+function celMaiMareNumarDintreDouaNumere(a, b){
+  return (a>b?a:b);
+}
+
+function celMaiMareNumarDintreTreiNumere(a,b,c){
+  return (celMaiMareNumarDintreDouaNumere(a,b) > c?celMaiMareNumarDintreDouaNumere(a.b):c);
+}
+
+console.log(celMaiMareNumarDintreTreiNumere(3,1,6))
+console.log(celMaiMareNumarDintreDouaNumere(celMaiMareNumarDintreDouaNumere(3,1),6));
+
+function celMaiMareDintreTrei(a,b,c){
+  if(a>b&& a>c)
+    return a;
+ 
+  if(b>a&& b>c)
+    return b;
+  if(c>b&& c>a)
+    return c;
+}
+
+console.log(celMaiMareDintreTrei(7,1,3))
+
+//3.
+//functie care verifica daca un numar este prim
+function prime(nr)
+{
+  let count = 0;
+  for(let i = 2; i<nr; i++)
+    {
+      if(nr % i == 0)
+        count++
+    }
+  if(count == 0)
+    {
+      return 1;
+    }
+  else
+    return 0;
+}
+
+//functie care gaseste cel mai mare numar prim mai mic decat n
+function isPrim(n)
+{
+  for (let i = n; i >= 1; i--)
+    {
+      if(prime(i))
+        return i; //In momentul in care functia vede return, se opreste
+    }
+}
+
+console.log(isPrim(15));
+
+var elev1={firstName:'Ion',
+           lastName:'Popescu',
+           media:9.8,
+           varsta:22
+}
+
+//4.
+function medie(a,b) {
+  let ma;
+  ma=(a+b)/2;
+  return ma;
+}
+
+console.log(elev1);
+//object.assign:
+var elev2 = Object.assign({}, elev1);
+console.log(elev2);
+elev2.media = 8;
+console.log(elev1);
+console.log(elev2);
+
+console.log(medie(elev1.media, elev2.media))
+
+
+//5.
+function cateNumerePrimeMaiMiciDecatnExista(n){
+  var contor = 0;
+  for(var i = 2; i < n; i++)
+    if(prime(i)==1)
+      contor++;
+  return contor;
+}
+
+console.log(cateNumerePrimeMaiMiciDecatnExista(15));

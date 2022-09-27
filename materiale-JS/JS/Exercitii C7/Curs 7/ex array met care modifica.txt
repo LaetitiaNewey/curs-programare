@@ -1,0 +1,21 @@
+let myArray = [1,2,4,5,6,8,8];
+console.log(myArray);
+
+myArray[4]=100;
+console.log(myArray); //array urile pot fi accesate la fel ca obiectele doar ca la array uri lucram cu index, dar la ob lucram cu cheile unice
+
+myArray.push(100);
+console.log(myArray);
+myArray.push(300);
+console.log(myArray);
+myArray.pop();
+console.log(myArray);
+myArray.pop();
+console.log(myArray);
+
+myArray.reverse();
+console.log(myArray);
+
+myArray.sort();
+console.log(myArray);
+

@@ -1,0 +1,33 @@
+
+
+// // class e folosit pt a da tipul unui obiect
+// //classa e blueprintul unui ob (aruncam tot ce e nevoie in ea) si obiectul este o instantiere a unei clase = blueprintul construit (intrebare interviu: diferenta intre clase si obiecte? ) 
+
+class Angajat { 
+  constructor (nume, varsta, salariu) {
+          console.log('in constructor');
+          console.log(this);
+          this.nume = nume;
+          console.log(this);
+          this.varsta = varsta;
+          console.log(this);
+          this.salariu = salariu;
+          console.log(this);
+        }
+              
+         marire() {
+           this.salariu+=300;
+              }
+             
+         afiseazaNumeSiVarsta() {
+            console.log(this.nume + ' ' + this.varsta);
+               }
+              }
+//pana aici e blueprintul nostru - o schita..codul nu face nimic
+
+let angajat1 = new Angajat ('Andrei', 25, 9000);
+angajat1.afiseazaNumeSiVarsta(); //apelam functia
+angajat1.marire(); //apelam functia
+console.log(angajat1);
+
+//concluzia: cel mai avansat mod de a structura codul in JS
