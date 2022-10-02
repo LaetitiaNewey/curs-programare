@@ -1,10 +1,15 @@
 #clock {
-    font-size: 175px;
-    width: 1000px;
-    margin: 200px;
-    text-align: center;
-    border: 2px dotted black;
-    border-radius: 20px;
-    background-color: bisque;
-  }
+  font-size: 175px;
+  width: 1000px;
+  margin: auto;
+  padding: 70px 0;
+  text-align: center;
+  border: 3px dotted black;
+  border-radius: 20px;
+  background-color: bisque;
+  transform: translate(0%, 45%);
+}
 
+body {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
