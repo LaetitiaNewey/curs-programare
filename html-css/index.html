@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- import -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@500&family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class = "header">
+        <!-- JS adauga sau sterge in interiorul clasei menu-open -->
+        <div class="container">
+        <h1><a href="./index.html" class = "brand">Letitia Provian</a></h1>
+        <div class="nav-menu">
+
+        <ul>
+            <li><a href="#" class="nav-item active">Home</a></li>
+            <li><a href="#" class="nav-item">Gallery</a></li>
+            <li><a href="#" class="nav-item">Services</a></li>
+            <li><a href="#" class="nav-item">Contact</a></li>
+        </ul>
+        </div>
+
+        <div class="nav-social-menu">
+            <ul>
+                <li><a href="#" class="nav-item"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="nav-item"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" class="nav-item"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#" class="nav-item"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    <!-- HEADER -->
+    <div class ="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+
+    </div>
+        </div>
+    </header>
+    <!-- HEADER OBISNUIT-->
+
+    <!-- MAIN -->
+
+    <div class="main">
+        
+        <div class="section category1">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category2">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category3">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category4">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category5">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category6">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category7">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category8">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+        <div class="section category9">
+            <h1>Nature</h1>
+            <a href="#">More photos</a>
+        </div>
+    </div>
+
+    <script>
+        let header=document.querySelector(".header");
+        let hamburgerMenu=document.querySelector(".hamburger-menu");
+        let navLinks=document.querySelectorAll(".nav-menu");
+        hamburgerMenu.addEventListener("click",function(){
+            header.classList.toggle("menu-open"); /se adauga-se scoate/
+        })
+        navLinks.forEach(navLinks=>{
+            navLinks.addEventListener("click",()=>{
+                header.classList.toggle("menu-open");
+            })
+        })
+    </script>
+</body>
+</html>

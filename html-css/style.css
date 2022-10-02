@@ -1,0 +1,261 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"); */
+
+*{
+    margin:0px;
+    /* padding:5px; */
+    font-family:'Josefin Sans', Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+/* 1 rem = 16px */
+a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding:16px 8px;
+}
+
+a.brand{
+    color:white;
+    padding: 0 3rem;
+}
+
+i{
+    padding:16px 8px;
+}
+
+.nav-menu a{
+    text-transform: uppercase;
+    padding: 0 3rem;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;/*1 rem = 10 px*/
+}
+
+body{
+    background-color: black;
+    color: white;
+    width: 100%;
+    /* 1 rem = 16 px */
+    font-size:1.6rem;
+}
+
+.active{
+    color:white;
+}
+
+.nav-item:hover{
+
+    color:white;
+    transition: color 0.9s ease;
+    /* transition poate fi pe culoare, background, etc */
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+.nav-menu ul{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.nav-social-menu ul{
+display: flex;
+justify-content: space-between;
+width:20rem;
+padding: 0 3rem;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    background-color: black;
+    grid-gap:5rem;
+}
+
+.main{
+    margin-top: 12rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:5rem;
+    padding: 0 3rem;
+    height: 100%;
+}
+
+.section{
+    width:100%;
+    height:30vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+    transition: filter 0.3 linear;
+
+}
+
+.section:hover{
+    filter:grayscale(0%);
+}
+
+.section a{
+    border: 2px solid white;
+    margin:2rem;
+    font-weight: bold;
+    color:white;
+    padding:1.6rem 2.6rem;
+}
+
+.section a:hover{
+    background-color: white;
+    color:black;
+}
+
+.hamburger-menu{
+    display:none;
+}
+
+@media screen and (max-width:900px){
+    /* .hamburger-menu{
+        display:block;
+    } */
+
+    a.brand{
+        color:red;
+    }
+
+    .nav-menu {
+    display:none;
+    }
+
+    .nav-social-menu{
+    display:block;
+    }
+
+    .hamburger-menu{
+        display:block;
+        z-index: 500;
+        float: right;
+    }
+
+    .hamburger-menu i{
+        cursor: pointer;
+    }
+
+    .menu-open .hamburger-menu .fa-bars{
+        display:none;
+    }
+
+    .menu-open .hamburger-menu .fa-xmark{
+        display:block;
+        padding: 3rem;
+    }
+
+    .hamburger-menu .fa-bars{
+        display:block;
+        padding: 3rem;
+    }
+
+    .hamburger-menu .fa-xmark{
+        display:none;
+    }
+
+    .menu-open .nav-menu{
+        position:fixed;
+        top:0;
+        left:0;
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        height: 100vh;
+        opacity:1;
+        z-index:500;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+     .menu-open  .nav-menu ul {
+        background-color: black;
+        color: white;
+        z-index:900;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7rem;
+        }
+
+        .main{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .section{
+            height: 50vh;
+        }
+
+        a.brand{
+            width:50px;
+        }
+}
+
+.category1{
+    background:url("images/img1.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category2{
+    background:url("images/img2.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category3{
+    background:url("images/img3.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category4{
+    background:url("images/img4.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category5{
+    background:url("images/img5.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category6{
+    background:url("images/img6.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category7{
+    background:url("images/img7.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.category8{
+    background:url("images/img8.jpg") center no-repeat;
+    background-size:cover;
+}
+.category9{
+    background:url("images/img9.jpg") center no-repeat;
+    background-size:cover;
+}
