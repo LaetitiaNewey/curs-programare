@@ -414,6 +414,14 @@ section .title::after {
 }
 
 /* projects section styling */
+
+.grid-container {
+  display: grid;
+  grid-template: 230px / auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
 .projects .title::after {
   content: "made by me";
 }
