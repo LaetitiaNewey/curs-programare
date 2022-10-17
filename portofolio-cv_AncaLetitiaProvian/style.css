@@ -8,12 +8,11 @@
     text-decoration: none;
 }
 
-/* .banner {
-    background-image: rgb(131, 3, 3);
-  } */
 
 html{
     scroll-behavior: smooth;
+    font-size: 100%;
+    overflow-x: hidden;
 }
 
 /* custom scroll bar */
@@ -262,6 +261,58 @@ section .title::after{
     background: none;
 }
 
+/* Education import CSS portofolio website */
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:crimson;
+}
+
+
 /* education section styling */
 .education, .projects{
     color:#fff;
@@ -276,41 +327,15 @@ section .title::after{
     background: #111;
     content: "what i learned";
 }
-.education .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.education .serv-content .card:hover{
-    background: crimson;
-}
-.education .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.education .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.education .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.education .serv-content .card:hover i{
-    color: #fff;
-}
-.education .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
 
 /* experience section styling */
 
+.experience, .projects{
+    color:#fff;
+    background: #111;
+}
 .experience .title::after{
+    background: #111;
     content: "what i know";
 }
 .experience .experience-content .column{
@@ -376,10 +401,10 @@ section .title::after{
 .experience-content .right .js::before{
     width: 80%;
 }
-.experience-content .right .php::before{
+.experience-content .right .xml::before{
     width: 50%;
 }
-.experience-content .right .mysql::before{
+.experience-content .right .agile-scrum::before{
     width: 70%;
 }
 
