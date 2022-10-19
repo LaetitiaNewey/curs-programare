@@ -588,6 +588,47 @@ section .title::after {
   display: flex;
   align-items: center;
 }
+
+/* Social media */
+
+.fa {
+  padding: 10px;
+  font-size: 70px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
 .right form .button-area button {
   color: #fff;
   display: block;
