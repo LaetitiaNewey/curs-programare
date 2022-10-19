@@ -14,7 +14,7 @@ html {
   overflow-x: hidden;
 }
 
-/* custom scroll bar */
+/* Scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -29,7 +29,7 @@ html {
   background: #555;
 }
 
-/* All similar content styling codes */
+/* Similar content styling */
 section {
   padding: 100px 0;
 }
@@ -397,19 +397,28 @@ section .title::after {
   background: crimson;
 }
 .experience-content .right .html::before {
-  width: 90%;
+  width: 70%;
 }
 .experience-content .right .css::before {
-  width: 60%;
+  width: 40%;
 }
 .experience-content .right .js::before {
-  width: 40%;
+  width: 42%;
 }
 .experience-content .right .xml::before {
   width: 50%;
 }
 .experience-content .right .agile-scrum::before {
   width: 70%;
+}
+.experience-content .right .english::before {
+  width: 90%;
+}
+.experience-content .right .french::before {
+  width: 80%;
+}
+.experience-content .right .german::before {
+  width: 50%;
 }
 
 /* Jobs section styling */
@@ -460,6 +469,13 @@ section .title::after {
 }
 
 /* Projects section styling */
+a.anchor-link:link {
+  color: rgb(139, 7, 7);
+}
+a.anchor-link:visited {
+  color: hotpink;
+}
+
 .serv-content {
   display: grid;
   grid-template: 230px / auto auto auto auto;
