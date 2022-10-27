@@ -2,16 +2,16 @@ root.innerHTML += `
     <!-- <h2>Telefoane:</h2> -->
     <ul class="table-header">
         <table>
-            <caption>
-                Telefoanele disponibilile La Baiatu'
+            <caption class="caption">
+                Telefoane Disponibile
             </caption>
             <thead>
                 <tr>
                     <th scope="col">Nume</th>
                     <th scope="col">Pret</th>
-                    <th scope="col">Release Year</th>
-                    <th scope="col">Date Added</th>
-                    <th scope="col">Image</th>
+                    <th scope="col">Anul Lansarii</th>
+                    <th scope="col">Data Adaugarii</th>
+                    <th scope="col">Imagine</th>
                 </tr>
             </thead>
         </table>

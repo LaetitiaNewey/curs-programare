@@ -5,15 +5,15 @@ root.innerHTML += `
         <label for="price">Pret:</label>
         <input type="number" name="price" id="price" style="width: 107px;"/>
 		
-		</br><label for="releaseYear">Release Year:</label>
+		</br><label for="releaseYear">Anul Lansarii:</label>
         <input type="number" name="releaseYear" id="releaseYear" style="width: 256px;"/>
 		
-		<label for="dateAdded">Date Added:</label>
+		<label for="dateAdded">Data Adaugarii:</label>
 		<input type="date" id="dateAdded" name="dateAdded" 
 			value="2022-10-25" min="2022-01-01" max="new Date()" style="width: 256px;">
 		
-        </br><label for="image">Image:</label>
-        <input type="text" name="image" id="image" style="width: 670px;"/>
+        </br><label for="image">Imagine:</label>
+        <input type="text" name="image" id="image" placeholder="Add your phone image link here" style="width: 670px;"/>
 
         </br></br><input class="button" type="submit"/>
     </form>

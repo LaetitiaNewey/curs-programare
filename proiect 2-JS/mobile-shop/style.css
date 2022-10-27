@@ -107,11 +107,20 @@ td {
   padding: 20px;
 }
 
-h1 {
-  font-size: xxx-large;
-  color: rgb(71, 62, 205);
-  margin-left: 10%;
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
 }
+
+.caption {
+  font-style: oblique;
+  color: rgb(67, 43, 226);
+  font-weight: bold;
+}
+
 h2 {
   margin-left: 18%;
 }
