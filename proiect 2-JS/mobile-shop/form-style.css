@@ -1,4 +1,3 @@
-/* https://www.sanwebe.com/2014/08/css-html-forms-designs#form-1-html */
 .form-style-1 {
   margin: 10px auto;
   padding: 20px 12px 10px 20px;
@@ -68,18 +67,3 @@ select {
 .form-style-1 .field-textarea {
   height: 100px;
 }
-/* .form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	background: #4B99AD;
-	padding: 8px 15px 8px 15px;
-	border: none;
-	color: #fff;
-}
-.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-	background: #4691A4;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-} */
-/* .form-style-1 .required {
-  color: rgb(232, 20, 20);
-} */

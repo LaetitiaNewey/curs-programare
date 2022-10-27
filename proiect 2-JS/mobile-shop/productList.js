@@ -1,9 +1,8 @@
 root.innerHTML += `
-    <!-- <h2>Telefoane:</h2> -->
-    <ul class="table-header">
-        <table>
+<div class="main-table-header">
+        <table class="table-header">
             <caption class="caption">
-                Telefoane Disponibile
+            TELEFOANE DISPONIBILE
             </caption>
             <thead>
                 <tr>
@@ -15,13 +14,9 @@ root.innerHTML += `
                 </tr>
             </thead>
         </table>
-    </ul>
+        </div>
     <ul id="product-list"></ul>
 `;
-
-// https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
-// https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position
 
 function renderProductList(products) {
   const productList = document.querySelector("#product-list");

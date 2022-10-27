@@ -13,9 +13,9 @@ root.innerHTML += `
 			value="2022-10-25" min="2022-01-01" max="new Date()" style="width: 256px;">
 		
         </br><label for="image">Imagine:</label>
-        <input type="text" name="image" id="image" placeholder="Add your phone image link here" style="width: 670px;"/>
+        <input type="text" name="image" id="image" placeholder="Adauga aici un link cu poza telefonului" style="width: 670px;"/>
 
-        </br></br><input class="button" type="submit"/>
+        </br></br><input class="button" id="submit" type="submit"/>
     </form>
 `;
 
@@ -61,3 +61,4 @@ function addFormFunctionality() {
 }
 
 window.addEventListener("load", addFormFunctionality);
+// window.localStorage.clear();

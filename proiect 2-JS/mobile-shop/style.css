@@ -10,31 +10,27 @@ body {
 ul {
   border: 2px solid #044c62;
   border-radius: 15px;
-  /* display: flex; */
   display: grid;
   justify-content: space-evenly;
   list-style-type: circle;
   padding: 0;
 }
 
-/* https://www.w3schools.com/css/tryit.asp?filename=trycss_form_button */
-/* https://uiverse.io/detail/adamgiebl/lucky-donkey-6 */
-button,
+.button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
   color: #090909;
-  /* color: #0000FF; */
   padding: 0.7em 1.7em;
   font-size: 18px;
   border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
+  background: #e8b1b1;
+  border: 1px solid #1d68c4;
   transition: all 0.3s;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
-button:hover {
+.button:hover {
   border: 1px solid white;
 }
 
@@ -42,22 +38,9 @@ button:active {
   box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
 }
 
-/* https://freefrontend.com/css-forms/ */
-/* input[type="submit"] {
-  background-color: hsl(213, 73%, 50%);
-  color: white;
-}
-
-button[type="submit"]:hover {
-  background-color: hsl(213, 73%, 40%);
-} */
-
-/* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables */
 table {
   table-layout: fixed;
   width: 100%;
-  /* border-collapse: collapse; */
-  /* border: 3px solid purple; */
 }
 
 thead th:nth-child(1) {
@@ -102,6 +85,16 @@ tbody th:nth-child(5) {
   width: 20%;
 }
 
+/* .table-header {
+  background-color: rgba(15, 181, 93, 0.417);
+  border-radius: 1em;
+} */
+
+.main-table-header{
+  border-radius: 1em;
+  background-color: rgba(15, 181, 93, 0.417);
+}
+
 th,
 td {
   padding: 20px;
@@ -116,17 +109,27 @@ td {
 }
 
 .caption {
-  font-style: oblique;
-  color: rgb(67, 43, 226);
+  color: rgb(4, 99, 44);
   font-weight: bold;
+  font-size:large;
+  background-color: #1abc9c;
+  border-radius: 1em;
 }
 
 h2 {
   margin-left: 18%;
 }
 .sortClass {
-  margin-left: 18%;
+  text-align: center;
 }
+
+#root {
+  text-align: center;
+}
+#submit {
+  position: relative;
+}
+
 #add-product {
   margin-left: 5%;
 }
