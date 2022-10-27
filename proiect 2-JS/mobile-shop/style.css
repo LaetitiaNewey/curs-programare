@@ -3,17 +3,11 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  margin: 150px;
-  background-color: rgba(219, 241, 119, 0.7);
-}
-
-ul {
-  border: 2px solid #044c62;
-  border-radius: 15px;
-  display: grid;
-  justify-content: space-evenly;
-  list-style-type: circle;
-  padding: 0;
+  margin-top: 50px;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  background-color: rgba(191, 228, 171, 0.456);
 }
 
 .button,
@@ -28,6 +22,7 @@ input[type="reset"] {
   border: 1px solid #1d68c4;
   transition: all 0.3s;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  margin-right: 10px;
 }
 
 .button:hover {
@@ -43,61 +38,47 @@ table {
   width: 100%;
 }
 
-thead th:nth-child(1) {
-  width: 20%;
+/* table styling */
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  justify-content: space-evenly;
 }
 
-thead th:nth-child(2) {
-  width: 20%;
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-thead th:nth-child(3) {
-  width: 20%;
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
 }
 
-thead th:nth-child(4) {
-  width: 20%;
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
 }
 
-thead th:nth-child(5) {
-  width: 20%;
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 
-/* tbody */
-
-tbody th:nth-child(1) {
-  width: 20%;
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }
 
-tbody th:nth-child(2) {
-  width: 20%;
-}
-
-tbody th:nth-child(3) {
-  width: 20%;
-}
-
-tbody th:nth-child(4) {
-  width: 20%;
-}
-
-tbody th:nth-child(5) {
-  width: 20%;
-}
-
-/* .table-header {
-  background-color: rgba(15, 181, 93, 0.417);
-  border-radius: 1em;
-} */
-
-.main-table-header{
+.main-table-header {
   border-radius: 1em;
   background-color: rgba(15, 181, 93, 0.417);
-}
-
-th,
-td {
-  padding: 20px;
 }
 
 .header {
@@ -109,18 +90,20 @@ td {
 }
 
 .caption {
-  color: rgb(4, 99, 44);
+  color: white;
   font-weight: bold;
-  font-size:large;
+  font-size: 25px;
   background-color: #1abc9c;
   border-radius: 1em;
+  align-items: center;
 }
 
 h2 {
   margin-left: 18%;
 }
 .sortClass {
-  text-align: center;
+  display: inline;
+  margin-top: 20px;
 }
 
 #root {

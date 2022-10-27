@@ -1,8 +1,8 @@
 root.innerHTML += `
 <div class="sortClass">
     <button class="button" id="sort-by-price">Sorteaza dupa Pret</button>
-	<button class="button" id="sort-by-release-year">Sorteaza dupa Anul Lansarii</button>
-	<button class="button" id="sort-by-date-added">Sorteaza dupa Data Adaugarii</button>
+	  <button class="button" id="sort-by-release-year">Sorteaza dupa Anul Lansarii</button>
+	  <button class="button" id="sort-by-date-added">Sorteaza dupa Data Adaugarii</button>
 </div>
 `;
 

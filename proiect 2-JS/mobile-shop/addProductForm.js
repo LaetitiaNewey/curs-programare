@@ -59,6 +59,6 @@ function addFormFunctionality() {
     renderProductList(localStorageProducts);
   });
 }
+// window.localStorage.clear();
 
 window.addEventListener("load", addFormFunctionality);
-// window.localStorage.clear();

@@ -1,9 +1,9 @@
 root.innerHTML += `
 <div class="main-table-header">
-        <table class="table-header">
-            <caption class="caption">
-            TELEFOANE DISPONIBILE
-            </caption>
+    <p class="caption">
+      Telefoane Disponibile
+    </p>
+        <table class="content-table">
             <thead>
                 <tr>
                     <th scope="col">Nume</th>
@@ -13,9 +13,9 @@ root.innerHTML += `
                     <th scope="col">Imagine</th>
                 </tr>
             </thead>
+            <tbody id="product-list"></tbody>
         </table>
         </div>
-    <ul id="product-list"></ul>
 `;
 
 function renderProductList(products) {
